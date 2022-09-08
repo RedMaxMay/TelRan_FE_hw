@@ -1,0 +1,41 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+nav, main, aside, footer {
+    box-sizing: border-box;
+    border: 10px solid white;
+}
+
+nav {
+    background-color: #ff4da6;
+    width: 100vw;
+    height: 20vh;
+}
+
+.main-container {
+    display: flex;
+}
+
+main {
+    background-color: #ff037e;
+    width: 67vw;
+    height: 60vh;
+}
+
+aside {
+    background-color: #ce0468;
+    width: 33vw;
+    height: 60vh;
+}
+
+footer {
+    background-color: #802755;
+    width: 100vw;
+    height: 20vh;
+}
+
+
+
+

@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  margin: 0;
+  background: #2d273d;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1200px;
+}
+
+.block {
+  width: 350px;
+  height: 350px;
+  box-sizing: border-box;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.block--purple {
+  background: #303297 url(./img/bkg_purple.jpg) no-repeat; 
+}
+
+.block--red {
+  background: #ff4d4f url(./img/bkg_red.jpg) no-repeat;
+}
+
+.block--blue {
+  background: #2a79ff url(./img/bkg_blue.jpg) no-repeat;
+}
+
+.block--black {
+  background: #2a272b url(./img/bkg_black.jpg) no-repeat;
+}
+
+.block--white {
+  background: #fff url(./img/bkg_white.jpg) no-repeat;
+}
+
+.block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.block__logo,
+.block__subtitle {
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.block__logo,
+.block__title {
+  color: #fff;
+}
+
+.block__subtitle,
+.block__tags {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+}
+
+.block__subtitle {
+  font-weight: 400;
+}
+
+.is-uppercase {
+  text-transform: uppercase;
+}
+
+.block__title {
+  margin: 10px 0;
+}
+
+.black-font {
+  color: #333;
+}
+
+.gray-transperent-font {
+  color: rgb(51, 51, 51, 0.7);
+}
+
+.block__logo-img {
+  fill: rgb(255, 0, 0);
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+}
+
+.block__logo-img--white {
+  fill: rgb(255, 255, 255);
+}
+
+.block__logo-section {
+  display: flex;
+  align-items: flex-end;
+}
+
+.block__text-with-img--card {
+  background-image: url(./img/credircard.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 3px;
+  position: relative;
+  padding-left: 50px;
+}
+
+.block__text-with-img--search {
+  background-image: url(./img/search.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 3px;
+  position: relative;
+  padding-left: 50px;
+}
+

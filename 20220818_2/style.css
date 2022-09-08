@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.section {
+    width: 50vw;
+    height: 97vh;
+    margin: 10px;
+}
+
+.section_color {
+    background-color: aquamarine;
+}
+
+
+.flex-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-section_top {
+    height: 32%;
+}
+
+.flex-section_center {
+    display: flex;
+    justify-content: space-between;
+    height: 32%;
+}
+
+.flex-section_center_left {
+    width: 49%;
+}
+
+.flex-section_center_right {
+    width: 49%;
+}
+
+
+.flex-secton_bottom {
+    height: 32%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
