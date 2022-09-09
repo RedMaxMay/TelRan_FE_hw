@@ -17,7 +17,13 @@
 
       * {
         font-family: "Roboto", sans-serif;
+        
       }
+
+      .ml250 {
+        margin-left: 250px;
+      }
+
 
       .nav {
         display: flex;
@@ -30,10 +36,9 @@
         top: 0;
         left: 0;
         width: 250px;
-        height: 100vh;
+        height: 100%;
         overflow-y: auto;
         background-color: #f6f7ff;
-        /* padding: 25px 20px; */
       }
 
       .logo {
@@ -41,7 +46,7 @@
         display: flex;
         color: #51459c;
         align-items: center;
-        padding: 20px 20px 10px 20px;
+        padding: 25px 20px 10px 20px;
       }
 
       .logo__svg {
@@ -58,10 +63,10 @@
         padding-left: 10px;
       }
 
-      /* nav */
+      /* ---------------- nav ---------------- */
 
       .nav__section {
-        margin: 15px 0;
+        margin: 10px 0;
       }
 
       .nav__heading {
@@ -103,12 +108,13 @@
         font-size: 12px;
       }
 
-      /* nav help section */
+      /* ---------------- nav help section ---------------- */
 
       .nav__help {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 20px;
+        padding-top: 10px;
       }
 
       .help {
@@ -132,8 +138,9 @@
         height: 40px;
         background-color: white;
         border-radius: 100%;
-        margin-top: -20px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        margin-top: -30px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
       }
 
       .help__icon--orange {
@@ -169,7 +176,7 @@
       .help__text {
         color: #aa9379;
         padding: 5px;
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
 
       .help__btn {
@@ -180,7 +187,7 @@
         margin-bottom: 15px;
         background-color: white;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        font-size: .8rem;
+        font-size: 0.8rem;
         color: #4a3c2c;
         cursor: pointer;
       }
@@ -190,8 +197,278 @@
       }
 
       .help__btn:active {
-        box-shadow: rgb(204, 219, 232) 2px 2px 3px 0px inset, rgba(255, 255, 255, 0.5) -2px -2px 3px 1px inset;
+        box-shadow: rgb(204, 219, 232) 2px 2px 3px 0px inset,
+          rgba(255, 255, 255, 0.5) -2px -2px 3px 1px inset;
       }
+
+      /* ---------------- header ---------------- */
+
+
+      .header {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #f6f7ff;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px 150px 30px;
+        border-bottom: 1px solid #edeaf9;
+      }
+
+      .header__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        height: 2.5rem;
+        border-radius: 5px;
+      }
+
+      .search__icon {
+        padding: 10px;
+        color: #a7aab5;
+      }
+
+      .search__input {
+        border: none;
+        outline: none;
+        background-color: #fff;
+      }
+
+      .search__input::placeholder {
+        color: #a7aab5;
+      }
+
+      .header__icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100px;
+      }
+
+      .icon-link {
+        color: #333;
+        font-size: 1.5rem;
+      }
+
+      .icon-link:hover {
+        color: #a7aab5;
+      }
+
+      .header__link {
+        color: #a7aab5;
+      }
+
+      .header__link:hover {
+        color: #333;
+      }
+
+      .header__links *:not(:last-child) {
+        margin-right: 40px;
+      }
+
+      .header__account-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .header__user-link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 20%;
+      }
+
+      .header__user-link:hover .header__user-greetings {
+        color: #51459c;
+      }
+
+      .header__user-link:hover .avatar {
+        box-shadow: rgb(50 50 93 / 75%) 0px 13px 27px -5px,
+          rgb(0 0 0 / 70%) 0px 8px 16px -8px;
+      }
+
+      .header__user-greetings {
+        padding-right: 20px;
+        color: #333;
+        font-weight: 900;
+      }
+
+      .avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px,
+          rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+      }
+
+      /* ----------------- Main ---------------- */
+
+      .main__cards-list {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 20px;
+      }
+
+      .main__card-item {
+        margin: -100px 10px 10px 10px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        width: 360px;
+        height: 220px;
+        background-color: rgb(213, 238, 247);
+        border-radius: 20px;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        padding: 30px;
+
+        font-size: 12px;
+
+        transition: all .5s ease-in-out;
+      }
+
+      .card--top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .card__name {
+        font-weight: bold;
+      }
+
+      .card__link {
+        text-decoration: underline;
+        font-weight: bold;
+        color: #a5a5b0;
+      }
+
+      .card__link:hover {
+        color: #333;
+      }
+
+      .card--bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .card__amount {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .card--orange-blue {
+        background: linear-gradient(to right bottom, #ffedd0, #d2d6fe);
+      }
+
+      .card--pink {
+        background: linear-gradient(to right bottom, #feeec7, #fee1ec);
+      }
+
+      .card__currency {
+        border: none;
+        outline: none;
+        background: none;
+        font-weight: bold;
+      }
+
+      .card--question-icon {
+        width: 25px;
+        height: 25px;
+        background-color: #b6b9bc;
+        border-radius: 100%;
+        color: #e8dddc;
+        text-decoration: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card--question-icon:hover {
+        background-color: #c3c3c3;
+      }
+
+      .card__saving-icon-area {
+        width: 50px;
+        height: 50px;
+        background-color: pink;
+        border-radius: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card__saving-icon {
+        color: #fe2216;
+        font-size: 30px;
+      }
+
+      .card--bottom-wrap {
+        margin-right: 100px;
+      }
+      
+      .card__percentage {
+        font-size: 1.5rem;
+        color: #fe2216;
+        font-weight: bold;
+      }
+
+      .card__percentage-info {
+        font-weight: bold;
+        padding-top: 5px;
+      }
+
+      .pay-card {
+        background: linear-gradient(to left bottom, #eafdea, #dbfebe);
+      }
+
+      .pay-card__icon {
+        font-size: 35px;
+        margin: 0;
+      }
+
+      .pay-card__num-caption,
+      .pay-card__name-caption,
+      .pay-card__date-caption
+       {
+        text-transform: uppercase;
+        color: #999;
+        font-size: 10px;
+        margin: 10px 0;
+      }
+
+      .pay-card__number {
+        font-size: 1.3rem;
+        margin: 10px 0 10px 0;
+        font-weight: bold;
+      }
+
+      .pay-card__date,
+      .pay-card__name {
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .card:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+
+
+      /*  */
+
+
 
 
 
@@ -406,50 +683,114 @@
 
         <div class="help__section">
           <h3 class="help__heading">Help Center</h3>
-          <p class="help__text">Having trouble in Finti? Please contact us if you have any question!</p>
+          <p class="help__text">
+            Having trouble in Finti? Please contact us if you have any question!
+          </p>
         </div>
 
         <button class="help__btn">Go To Help Center</button>
       </div>
     </nav>
 
-    <header class="header">
-      <ul class="header__account-links">
-        <li class="header__link">Wallet</li>
-        <li class="header__link">Invoice</li>
-        <li class="header__link header__avatar">Hi, Shakir</li>
-      </ul>
+    <header class="header ml250">
+      <div class="header__nav">
+        <div class="header__search search">
+          <i class="las la-search search__icon"></i>
+          <input
+            class="search__input"
+            type="text"
+            name=""
+            id=""
+            placeholder="Search..."
+          />
+        </div>
+        <div class="header__icons">
+          <a class="icon-link" href=""><i class="las la-file"></i></a>
+          <a class="icon-link" href=""><i class="las la-inbox"></i></a>
+          <a class="icon-link" href=""><i class="las la-ellipsis-v"></i></a>
+        </div>
+        <div class="header__links">
+          <a class="header__link" href="#">Wallet</a>
+          <a class="header__link" href="#">Invoice</a>
+        </div>
+      </div>
 
-      <ul class="header__icons">
-        <li class="header__icon">Icon</li>
-        <li class="header__icon">Icon</li>
-        <li class="header__icon">Icon</li>
-      </ul>
-
-      <input
-        class="header__search"
-        type="text"
-        name=""
-        id=""
-        placeholder="Search..."
-      />
+      <a href="#" class="header__user-link">
+        <span class="header__user-greetings">Hi, Shakir</span>
+        <img class="avatar" src="./img/user-avatar.jpg" alt="Avatar" />
+      </a>
     </header>
 
-    <main class="main">
-      <section class="main__cards-list">
-        <div class="main__card-item balance-card">
-          <p class="balance-card__name">Your Working Balance</p>
-          <a class="balance-card__link" href="#">Saving Account</a>
-          <p class="balance-card__amount">PKR 9,250,000</p>
+    <main class="main ml250">
 
-          <select class="balance-card__currency" name="" id="">
-            <option value="1">PKR</option>
-            <option value="2">USD</option>
-          </select>
+      <section class="main__cards-list">
+
+
+        <div class="main__card-item card card--orange-blue">
+          
+          <div class="card--top">
+            <p class="card__name">Your Working Balance</p>
+            <a class="card__link" href="#">Saving Account</a>
+          </div>
+
+          <div class="card--bottom">
+            <p class="card__amount">PKR 9,250,000</p>
+            <select class="card__currency" name="" id="">
+              <option value="1">PKR</option>
+              <option value="2">USD</option>
+            </select>
+          </div>
+
         </div>
 
-        <div class="main__card-item saving-status-card"></div>
+        <div class="main__card-item card card--pink">
+
+          <div class="card--top">
+            <p class="card__name">Your Working Balance</p>
+            <a class="card__link card--question-icon" href="#">?</a>
+          </div>
+
+          <div class="card--bottom">
+            <div class="card__saving-icon-area"><i class="card__saving-icon las la-cube"></i></div>
+            <div class="card--bottom-wrap">
+              <p class="card__percentage">4.28%</p>
+              <p class="card__percentage-info">Your spending increased</p>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <div class="main__card-item card pay-card">
+          <i class="lab la-cc-mastercard pay-card__icon"></i>
+          <p class="pay-card__num-caption">Card number</p>
+          <p class="pay-card__number">3876 6763 8121 0922</p>
+
+          <div class="card--bottom">
+            <div class="pay-card__name-wrap">
+              <p class="pay-card__name-caption">cardholder name</p>
+              <p class="pay-card__name">John Doe</p>
+            </div>
+            <div class="pay-card__date-wrap">
+              <p class="pay-card__date-caption">valid thru</p>
+              <p class="pay-card__date">11/24</p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
       </section>
+
     </main>
 
     <footer></footer>
