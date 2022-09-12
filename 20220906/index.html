@@ -6,689 +6,241 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Super Finti</title>
 
-    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
     <link
       rel="stylesheet"
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
     />
-
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap");
-
-      * {
-        font-family: "Roboto", sans-serif;
-        
-      }
-
-      .ml250 {
-        margin-left: 250px;
-      }
-
-
-      .nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-
-        box-sizing: border-box;
-        border-right: 1px solid #edeaf9;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 250px;
-        height: 100%;
-        overflow-y: auto;
-        background-color: #f6f7ff;
-      }
-
-      .logo {
-        text-decoration: none;
-        display: flex;
-        color: #51459c;
-        align-items: center;
-        padding: 25px 20px 10px 20px;
-      }
-
-      .logo__svg {
-        width: 20px;
-        height: 20px;
-        fill: #51459c;
-        stroke: #51459c;
-        stroke-width: 32;
-      }
-
-      .logo__text {
-        font-size: 1.1rem;
-        font-weight: 600;
-        padding-left: 10px;
-      }
-
-      /* ---------------- nav ---------------- */
-
-      .nav__section {
-        margin: 10px 0;
-      }
-
-      .nav__heading {
-        font-size: 0.8rem;
-        color: #4e4d64;
-        padding: 10px 20px;
-      }
-
-      .nav__item {
-        font-size: 0.8rem;
-      }
-
-      .nav__menu-link {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 7px 15px;
-        color: #a5a5b0;
-      }
-
-      .nav__menu-link:hover {
-        color: #4e4d64;
-        background-color: #ffffff;
-      }
-
-      .nav__menu-text {
-        display: flex;
-        align-items: center;
-      }
-
-      .nav-icons {
-        color: #51459c;
-        padding-right: 10px;
-        padding-left: 10px;
-        font-size: 1.5rem;
-      }
-
-      .nav-arrow {
-        font-size: 12px;
-      }
-
-      /* ---------------- nav help section ---------------- */
-
-      .nav__help {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        padding-top: 10px;
-      }
-
-      .help {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 20px;
-        background: linear-gradient(to right, #fbf1df, #e0dbf5);
-        width: 200px;
-        height: 210px;
-        min-height: 150px;
-        box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-      }
-
-      .help__icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        background-color: white;
-        border-radius: 100%;
-        margin-top: -30px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-      }
-
-      .help__icon--orange {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 60%;
-        height: 60%;
-        border-radius: 100%;
-        background-color: #fb896b;
-      }
-
-      .help__icon--white {
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-      }
-
-      .help__section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-
-      .help__heading {
-        padding: 10px;
-        color: #4a3c2c;
-      }
-
-      .help__text {
-        color: #aa9379;
-        padding: 5px;
-        font-size: 0.8rem;
-      }
-
-      .help__btn {
-        border-radius: 10px;
-        border: none;
-        padding: 10px 30px;
-        margin-top: 10px;
-        margin-bottom: 15px;
-        background-color: white;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        font-size: 0.8rem;
-        color: #4a3c2c;
-        cursor: pointer;
-      }
-
-      .help__btn:hover {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      }
-
-      .help__btn:active {
-        box-shadow: rgb(204, 219, 232) 2px 2px 3px 0px inset,
-          rgba(255, 255, 255, 0.5) -2px -2px 3px 1px inset;
-      }
-
-      /* ---------------- header ---------------- */
-
-
-      .header {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: #f6f7ff;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px 150px 30px;
-        border-bottom: 1px solid #edeaf9;
-      }
-
-      .header__nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 70%;
-      }
-
-      .search {
-        display: flex;
-        align-items: center;
-        background-color: #ffffff;
-        height: 2.5rem;
-        border-radius: 5px;
-      }
-
-      .search__icon {
-        padding: 10px;
-        color: #a7aab5;
-      }
-
-      .search__input {
-        border: none;
-        outline: none;
-        background-color: #fff;
-      }
-
-      .search__input::placeholder {
-        color: #a7aab5;
-      }
-
-      .header__icons {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100px;
-      }
-
-      .icon-link {
-        color: #333;
-        font-size: 1.5rem;
-      }
-
-      .icon-link:hover {
-        color: #a7aab5;
-      }
-
-      .header__link {
-        color: #a7aab5;
-      }
-
-      .header__link:hover {
-        color: #333;
-      }
-
-      .header__links *:not(:last-child) {
-        margin-right: 40px;
-      }
-
-      .header__account-links {
-        display: flex;
-        align-items: center;
-      }
-
-      .header__user-link {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 20%;
-      }
-
-      .header__user-link:hover .header__user-greetings {
-        color: #51459c;
-      }
-
-      .header__user-link:hover .avatar {
-        box-shadow: rgb(50 50 93 / 75%) 0px 13px 27px -5px,
-          rgb(0 0 0 / 70%) 0px 8px 16px -8px;
-      }
-
-      .header__user-greetings {
-        padding-right: 20px;
-        color: #333;
-        font-weight: 900;
-      }
-
-      .avatar {
-        width: 30px;
-        height: 30px;
-        border-radius: 5px;
-        box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px,
-          rgb(0 0 0 / 30%) 0px 8px 16px -8px;
-      }
-
-      /* ----------------- Main ---------------- */
-
-      .main__cards-list {
-        display: flex;
-        justify-content: space-evenly;
-        margin: 0 20px;
-      }
-
-      .main__card-item {
-        margin: -100px 10px 10px 10px;
-      }
-
-      .card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-sizing: border-box;
-        width: 360px;
-        height: 220px;
-        background-color: rgb(213, 238, 247);
-        border-radius: 20px;
-        box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-        padding: 30px;
-
-        font-size: 12px;
-
-        transition: all .5s ease-in-out;
-      }
-
-      .card--top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .card__name {
-        font-weight: bold;
-      }
-
-      .card__link {
-        text-decoration: underline;
-        font-weight: bold;
-        color: #a5a5b0;
-      }
-
-      .card__link:hover {
-        color: #333;
-      }
-
-      .card--bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .card__amount {
-        font-size: 2rem;
-        font-weight: bold;
-      }
-
-      .card--orange-blue {
-        background: linear-gradient(to right bottom, #ffedd0, #d2d6fe);
-      }
-
-      .card--pink {
-        background: linear-gradient(to right bottom, #feeec7, #fee1ec);
-      }
-
-      .card__currency {
-        border: none;
-        outline: none;
-        background: none;
-        font-weight: bold;
-      }
-
-      .card--question-icon {
-        width: 25px;
-        height: 25px;
-        background-color: #b6b9bc;
-        border-radius: 100%;
-        color: #e8dddc;
-        text-decoration: none;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .card--question-icon:hover {
-        background-color: #c3c3c3;
-      }
-
-      .card__saving-icon-area {
-        width: 50px;
-        height: 50px;
-        background-color: pink;
-        border-radius: 100%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .card__saving-icon {
-        color: #fe2216;
-        font-size: 30px;
-      }
-
-      .card--bottom-wrap {
-        margin-right: 100px;
-      }
-      
-      .card__percentage {
-        font-size: 1.5rem;
-        color: #fe2216;
-        font-weight: bold;
-      }
-
-      .card__percentage-info {
-        font-weight: bold;
-        padding-top: 5px;
-      }
-
-      .pay-card {
-        background: linear-gradient(to left bottom, #eafdea, #dbfebe);
-      }
-
-      .pay-card__icon {
-        font-size: 35px;
-        margin: 0;
-      }
-
-      .pay-card__num-caption,
-      .pay-card__name-caption,
-      .pay-card__date-caption
-       {
-        text-transform: uppercase;
-        color: #999;
-        font-size: 10px;
-        margin: 10px 0;
-      }
-
-      .pay-card__number {
-        font-size: 1.3rem;
-        margin: 10px 0 10px 0;
-        font-weight: bold;
-      }
-
-      .pay-card__date,
-      .pay-card__name {
-        font-weight: bold;
-        font-size: 14px;
-      }
-
-      .card:hover {
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      }
-
-
-      /*  */
-
-
-
-
-
-    </style>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <nav class="nav">
-      <a class="logo" href="./index.html">
-        <svg
-          class="logo__svg"
-          version="1.1"
-          id="Capa_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 587.9 587.9"
-          style="enable-background: new 0 0 587.9 587.9"
-          xml:space="preserve"
-        >
-          <g>
+    <nav>
+      <div class="nav m-menu">
+        <a class="logo" href="./index.html">
+          <svg
+            class="logo__svg"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 587.9 587.9"
+            style="enable-background: new 0 0 587.9 587.9"
+            xml:space="preserve"
+          >
             <g>
               <g>
-                <path
-                  class="st0"
-                  d="M101.2,486.7c25,25,54.2,44.7,86.6,58.4c33.6,14.2,69.3,21.4,106.1,21.4s72.5-7.2,106.1-21.4
-                  c32.5-13.7,61.6-33.4,86.6-58.4c25-25,44.7-54.2,58.4-86.6c14.2-33.6,21.4-69.3,21.4-106.1c0-36.8-7.2-72.5-21.4-106.1
-                  c-13.7-32.5-33.4-61.6-58.4-86.6c-25-25-54.2-44.7-86.6-58.4C366.4,28.6,330.7,21.4,294,21.4s-72.5,7.2-106.1,21.4
-                  c-32.5,13.7-61.6,33.4-86.6,58.4s-44.7,54.2-58.4,86.6C28.6,221.5,21.4,257.2,21.4,294c0,36.8,7.2,72.5,21.4,106.1
-                  C56.5,432.5,76.2,461.7,101.2,486.7z M294,61.1c128.6,0,232.8,104.2,232.8,232.8S422.5,526.8,294,526.8S61.2,422.5,61.2,294
-                  S165.4,61.1,294,61.1z"
-                />
-                <path
-                  class="st0"
-                  d="M294,567c-36.8,0-72.6-7.2-106.3-21.5c-32.5-13.8-61.7-33.4-86.8-58.5c-25.1-25.1-44.7-54.3-58.5-86.8
-                  C28.1,366.6,20.9,330.8,20.9,294c0-36.8,7.2-72.6,21.5-106.3c13.8-32.5,33.4-61.7,58.5-86.8c25.1-25.1,54.3-44.7,86.8-58.5
-                  c33.7-14.2,69.5-21.5,106.3-21.5c36.8,0,72.6,7.2,106.3,21.5c32.5,13.8,61.7,33.4,86.8,58.5c25.1,25.1,44.7,54.3,58.5,86.8
-                  C559.8,221.3,567,257.1,567,294c0,36.8-7.2,72.6-21.5,106.3C531.8,432.8,512.1,462,487,487c-25.1,25.1-54.3,44.8-86.8,58.5
-                  C366.6,559.8,330.8,567,294,567z M294,21.8c-36.7,0-72.4,7.2-105.9,21.4c-32.4,13.7-61.5,33.3-86.5,58.3
-                  c-25,25-44.6,54.1-58.3,86.5C29,221.6,21.8,257.2,21.8,294c0,36.7,7.2,72.4,21.4,105.9c13.7,32.4,33.3,61.5,58.3,86.5
-                  c25,25,54.1,44.6,86.5,58.3c33.6,14.2,69.2,21.4,105.9,21.4s72.4-7.2,105.9-21.4c32.4-13.7,61.5-33.3,86.5-58.3
-                  c25-25,44.6-54.1,58.3-86.5c14.2-33.6,21.4-69.2,21.4-105.9s-7.2-72.4-21.4-105.9c-13.7-32.4-33.3-61.5-58.3-86.5
-                  s-54.1-44.6-86.5-58.3C366.3,29,330.7,21.8,294,21.8z M294,527.2c-62.3,0-120.9-24.3-164.9-68.3C85,414.8,60.7,356.3,60.7,294
-                  S85,173.1,129,129S231.6,60.7,294,60.7S414.8,84.9,458.9,129s68.3,102.6,68.3,164.9S503,414.8,458.9,458.9
-                  C414.8,503,356.3,527.2,294,527.2z M294,61.6c-62.1,0-120.4,24.2-164.3,68.1C85.8,173.5,61.6,231.9,61.6,294
-                  s24.2,120.4,68.1,164.3c43.9,43.9,102.2,68.1,164.3,68.1s120.4-24.2,164.3-68.1S526.3,356,526.3,294s-24.2-120.4-68.1-164.3
-                  C414.4,85.8,356,61.6,294,61.6z"
-                />
-              </g>
-              <g>
-                <path
-                  class="st0"
-                  d="M148.1,378.8c9,6.2,19.5,9.4,30.5,9.4h230.3c11,0,21.5-3.3,30.5-9.4c8.3-5.7,14.8-13.6,18.9-22.8
-                  s5.5-19.4,4.1-29.3c-1.5-10.8-6.2-20.8-13.6-28.9L333.7,171.6c-10.2-11.2-24.8-17.6-39.9-17.6c-15.1,0-29.7,6.4-39.9,17.6
-                  L138.8,297.8c-7.4,8.1-12.1,18.1-13.6,28.9c-1.4,9.9,0,20.1,4.1,29.3C133.3,365.2,139.9,373.1,148.1,378.8z M168.2,324.6
-                  l115.1-126.2c2.8-3.1,6.7-4.6,10.5-4.6s7.7,1.5,10.5,4.6l115.1,126.2c8.3,9.1,1.8,23.8-10.5,23.8H178.7
-                  C166.3,348.4,159.8,333.7,168.2,324.6z"
-                />
-                <path
-                  class="st0"
-                  d="M408.9,388.7H178.7c-11.1,0-21.7-3.3-30.8-9.5c-8.3-5.7-14.9-13.7-19-23c-4.1-9.3-5.5-19.5-4.1-29.6
-                  c1.5-10.9,6.3-20.9,13.7-29.1l115.1-126.2c10.3-11.3,25-17.8,40.2-17.8c15.3,0,29.9,6.5,40.2,17.8l115.1,126.2
-                  c7.5,8.2,12.2,18.3,13.7,29.1c1.4,10,0,20.3-4.1,29.6c-4.1,9.3-10.7,17.3-19,23C430.7,385.4,420,388.7,408.9,388.7z M293.8,154.4
-                  c-15,0-29.4,6.4-39.6,17.5L139.1,298.1c-7.3,8.1-12,18-13.5,28.6c-1.4,9.9,0,19.9,4.1,29.1c4,9.2,10.5,17,18.7,22.6
-                  c8.9,6.1,19.4,9.3,30.3,9.3h230.3c10.9,0,21.4-3.2,30.3-9.3c8.2-5.6,14.7-13.4,18.7-22.6c4-9.2,5.5-19.2,4.1-29.1
-                  c-1.5-10.7-6.2-20.6-13.5-28.6L333.4,171.9C323.2,160.8,308.8,154.4,293.8,154.4z M408.9,348.9H178.7c-5.9,0-11-3.4-13.4-8.8
-                  s-1.4-11.5,2.6-15.8L283,198.1c2.8-3,6.7-4.8,10.8-4.8s8.1,1.7,10.8,4.8l115.1,126.2c4,4.4,5,10.4,2.6,15.8
-                  C420,345.5,414.8,348.9,408.9,348.9z M293.8,194.2c-3.9,0-7.6,1.6-10.2,4.5L168.5,324.9c-3.7,4.1-4.7,9.8-2.4,14.8
-                  c2.2,5.1,7.1,8.2,12.6,8.2h230.3c5.5,0,10.3-3.1,12.6-8.2c2.2-5.1,1.3-10.7-2.4-14.8L304,198.7
-                  C301.4,195.8,297.7,194.2,293.8,194.2z"
-                />
+                <g>
+                  <path
+                    class="st0"
+                    d="M101.2,486.7c25,25,54.2,44.7,86.6,58.4c33.6,14.2,69.3,21.4,106.1,21.4s72.5-7.2,106.1-21.4
+                    c32.5-13.7,61.6-33.4,86.6-58.4c25-25,44.7-54.2,58.4-86.6c14.2-33.6,21.4-69.3,21.4-106.1c0-36.8-7.2-72.5-21.4-106.1
+                    c-13.7-32.5-33.4-61.6-58.4-86.6c-25-25-54.2-44.7-86.6-58.4C366.4,28.6,330.7,21.4,294,21.4s-72.5,7.2-106.1,21.4
+                    c-32.5,13.7-61.6,33.4-86.6,58.4s-44.7,54.2-58.4,86.6C28.6,221.5,21.4,257.2,21.4,294c0,36.8,7.2,72.5,21.4,106.1
+                    C56.5,432.5,76.2,461.7,101.2,486.7z M294,61.1c128.6,0,232.8,104.2,232.8,232.8S422.5,526.8,294,526.8S61.2,422.5,61.2,294
+                    S165.4,61.1,294,61.1z"
+                  />
+                  <path
+                    class="st0"
+                    d="M294,567c-36.8,0-72.6-7.2-106.3-21.5c-32.5-13.8-61.7-33.4-86.8-58.5c-25.1-25.1-44.7-54.3-58.5-86.8
+                    C28.1,366.6,20.9,330.8,20.9,294c0-36.8,7.2-72.6,21.5-106.3c13.8-32.5,33.4-61.7,58.5-86.8c25.1-25.1,54.3-44.7,86.8-58.5
+                    c33.7-14.2,69.5-21.5,106.3-21.5c36.8,0,72.6,7.2,106.3,21.5c32.5,13.8,61.7,33.4,86.8,58.5c25.1,25.1,44.7,54.3,58.5,86.8
+                    C559.8,221.3,567,257.1,567,294c0,36.8-7.2,72.6-21.5,106.3C531.8,432.8,512.1,462,487,487c-25.1,25.1-54.3,44.8-86.8,58.5
+                    C366.6,559.8,330.8,567,294,567z M294,21.8c-36.7,0-72.4,7.2-105.9,21.4c-32.4,13.7-61.5,33.3-86.5,58.3
+                    c-25,25-44.6,54.1-58.3,86.5C29,221.6,21.8,257.2,21.8,294c0,36.7,7.2,72.4,21.4,105.9c13.7,32.4,33.3,61.5,58.3,86.5
+                    c25,25,54.1,44.6,86.5,58.3c33.6,14.2,69.2,21.4,105.9,21.4s72.4-7.2,105.9-21.4c32.4-13.7,61.5-33.3,86.5-58.3
+                    c25-25,44.6-54.1,58.3-86.5c14.2-33.6,21.4-69.2,21.4-105.9s-7.2-72.4-21.4-105.9c-13.7-32.4-33.3-61.5-58.3-86.5
+                    s-54.1-44.6-86.5-58.3C366.3,29,330.7,21.8,294,21.8z M294,527.2c-62.3,0-120.9-24.3-164.9-68.3C85,414.8,60.7,356.3,60.7,294
+                    S85,173.1,129,129S231.6,60.7,294,60.7S414.8,84.9,458.9,129s68.3,102.6,68.3,164.9S503,414.8,458.9,458.9
+                    C414.8,503,356.3,527.2,294,527.2z M294,61.6c-62.1,0-120.4,24.2-164.3,68.1C85.8,173.5,61.6,231.9,61.6,294
+                    s24.2,120.4,68.1,164.3c43.9,43.9,102.2,68.1,164.3,68.1s120.4-24.2,164.3-68.1S526.3,356,526.3,294s-24.2-120.4-68.1-164.3
+                    C414.4,85.8,356,61.6,294,61.6z"
+                  />
+                </g>
+                <g>
+                  <path
+                    class="st0"
+                    d="M148.1,378.8c9,6.2,19.5,9.4,30.5,9.4h230.3c11,0,21.5-3.3,30.5-9.4c8.3-5.7,14.8-13.6,18.9-22.8
+                    s5.5-19.4,4.1-29.3c-1.5-10.8-6.2-20.8-13.6-28.9L333.7,171.6c-10.2-11.2-24.8-17.6-39.9-17.6c-15.1,0-29.7,6.4-39.9,17.6
+                    L138.8,297.8c-7.4,8.1-12.1,18.1-13.6,28.9c-1.4,9.9,0,20.1,4.1,29.3C133.3,365.2,139.9,373.1,148.1,378.8z M168.2,324.6
+                    l115.1-126.2c2.8-3.1,6.7-4.6,10.5-4.6s7.7,1.5,10.5,4.6l115.1,126.2c8.3,9.1,1.8,23.8-10.5,23.8H178.7
+                    C166.3,348.4,159.8,333.7,168.2,324.6z"
+                  />
+                  <path
+                    class="st0"
+                    d="M408.9,388.7H178.7c-11.1,0-21.7-3.3-30.8-9.5c-8.3-5.7-14.9-13.7-19-23c-4.1-9.3-5.5-19.5-4.1-29.6
+                    c1.5-10.9,6.3-20.9,13.7-29.1l115.1-126.2c10.3-11.3,25-17.8,40.2-17.8c15.3,0,29.9,6.5,40.2,17.8l115.1,126.2
+                    c7.5,8.2,12.2,18.3,13.7,29.1c1.4,10,0,20.3-4.1,29.6c-4.1,9.3-10.7,17.3-19,23C430.7,385.4,420,388.7,408.9,388.7z M293.8,154.4
+                    c-15,0-29.4,6.4-39.6,17.5L139.1,298.1c-7.3,8.1-12,18-13.5,28.6c-1.4,9.9,0,19.9,4.1,29.1c4,9.2,10.5,17,18.7,22.6
+                    c8.9,6.1,19.4,9.3,30.3,9.3h230.3c10.9,0,21.4-3.2,30.3-9.3c8.2-5.6,14.7-13.4,18.7-22.6c4-9.2,5.5-19.2,4.1-29.1
+                    c-1.5-10.7-6.2-20.6-13.5-28.6L333.4,171.9C323.2,160.8,308.8,154.4,293.8,154.4z M408.9,348.9H178.7c-5.9,0-11-3.4-13.4-8.8
+                    s-1.4-11.5,2.6-15.8L283,198.1c2.8-3,6.7-4.8,10.8-4.8s8.1,1.7,10.8,4.8l115.1,126.2c4,4.4,5,10.4,2.6,15.8
+                    C420,345.5,414.8,348.9,408.9,348.9z M293.8,194.2c-3.9,0-7.6,1.6-10.2,4.5L168.5,324.9c-3.7,4.1-4.7,9.8-2.4,14.8
+                    c2.2,5.1,7.1,8.2,12.6,8.2h230.3c5.5,0,10.3-3.1,12.6-8.2c2.2-5.1,1.3-10.7-2.4-14.8L304,198.7
+                    C301.4,195.8,297.7,194.2,293.8,194.2z"
+                  />
+                </g>
               </g>
             </g>
-          </g>
-        </svg>
-        <span class="logo__text">Super Finti</span>
-      </a>
+          </svg>
+          <span class="logo__text">Super Finti</span>
+        </a>
 
-      <div class="nav__section">
-        <h3 class="nav__heading">Main Navigation</h3>
-        <ul class="nav__main-nav-list">
-          <li class="nav__item">
-            <a class="nav__menu-link" href="#">
-              <div class="nav__menu-text">
-                <i class="las la-th-large nav-icons"></i>
-                Dashboard
-              </div>
-              <i class="las la-angle-right nav-arrow"></i>
-            </a>
-            <ul class="nav__second-nav-list">
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a class="nav__menu-link" href="#"
-              ><div class="nav__menu-text">
-                <i class="las la-expand nav-icons"></i>Transaction
-              </div>
-              <i class="las la-angle-right nav-arrow"></i
-            ></a>
-            <ul class="nav__second-nav-list">
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a class="nav__menu-link" href="#"
-              ><div class="nav__menu-text">
-                <i class="las la-address-book nav-icons"></i>Contacts
-              </div>
-              <i class="las la-angle-right nav-arrow"></i
-            ></a>
-            <ul class="nav__second-nav-list">
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a class="nav__menu-link" href="#"
-              ><div class="nav__menu-text">
-                <i class="las la-bullseye nav-icons"></i>Features
-              </div>
-              <i class="las la-angle-right nav-arrow"></i
-            ></a>
-            <ul class="nav__second-nav-list">
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a class="nav__menu-link" href="#"
-              ><div class="nav__menu-text">
-                <i class="las la-grip-lines-vertical nav-icons"></i>Library
-              </div>
-              <i class="las la-angle-right nav-arrow"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
+        <div class="nav__section">
+          <h3 class="nav__heading">Main Navigation</h3>
 
-      <div class="nav__section">
-        <h3 class="nav__heading">Settings & Schedules</h3>
-        <ul class="nav__main-nav-list">
-          <li class="nav__item">
-            <a class="nav__menu-link" href="#">
-              <div class="nav__menu-text">
-                <i class="las la-wallet nav-icons"></i>
-                Base Wallet
-              </div>
-              <i class="las la-angle-right nav-arrow"></i>
-            </a>
-            <ul class="nav__second-nav-list">
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a class="nav__menu-link" href="#"
-              ><div class="nav__menu-text">
-                <i class="las la-expand nav-icons"></i>My Contacts
-              </div>
-              <i class="las la-angle-right nav-arrow"></i
-            ></a>
-            <ul class="nav__second-nav-list">
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a class="nav__menu-link" href="#"
-              ><div class="nav__menu-text">
-                <i class="las la-file-invoice-dollar nav-icons"></i>Invoices
-              </div>
-              <i class="las la-angle-right nav-arrow"></i
-            ></a>
-            <ul class="nav__second-nav-list">
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a class="nav__menu-link" href="#"
-              ><div class="nav__menu-text">
-                <i class="las la-calendar-check nav-icons"></i>Schedules
-              </div>
-              <i class="las la-angle-right nav-arrow"></i
-            ></a>
-            <ul class="nav__second-nav-list">
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-              <li class="nav__second-item"></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+          <ul class="nav__main-nav-list">
+            <li class="nav__item">
+              <a class="nav__menu-link" href="#">
+                <div class="nav__menu-text">
+                  <i class="las la-th-large nav-icons"></i>
+                  Dashboard
+                </div>
+                <i class="las la-angle-right nav-arrow"></i>
+              </a>
 
-      <div class="nav__section nav__help help">
-        <div class="help__icon">
-          <div class="help__icon--orange">
-            <span class="help__icon--white">?</span>
+              <ul class="nav__second-nav-list">
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Global Amount</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Live information</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">All Trafic</a></li>
+              </ul>
+
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__menu-link" href="#"
+                ><div class="nav__menu-text">
+                  <i class="las la-expand nav-icons"></i>Transaction
+                </div>
+                <i class="las la-angle-right nav-arrow"></i
+              ></a>
+              <ul class="nav__second-nav-list">
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Global Amount</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Live information</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">All Trafic</a></li>
+              </ul>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__menu-link" href="#"
+                ><div class="nav__menu-text">
+                  <i class="las la-address-book nav-icons"></i>Contacts
+                </div>
+                <i class="las la-angle-right nav-arrow"></i
+              ></a>
+              <ul class="nav__second-nav-list">
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Global Amount</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Live information</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">All Trafic</a></li>
+              </ul>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__menu-link" href="#"
+                ><div class="nav__menu-text">
+                  <i class="las la-bullseye nav-icons"></i>Features
+                </div>
+                <i class="las la-angle-right nav-arrow"></i
+              ></a>
+              <ul class="nav__second-nav-list">
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Global Amount</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Live information</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">All Trafic</a></li>
+              </ul>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__menu-link" href="#"
+                ><div class="nav__menu-text">
+                  <i class="las la-grip-lines-vertical nav-icons"></i>Library
+                </div>
+                </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="nav__section">
+          <h3 class="nav__heading">Settings & Schedules</h3>
+          <ul class="nav__main-nav-list">
+            <li class="nav__item">
+              <a class="nav__menu-link" href="#">
+                <div class="nav__menu-text">
+                  <i class="las la-wallet nav-icons"></i>
+                  Base Wallet
+                </div>
+                <i class="las la-angle-right nav-arrow"></i>
+              </a>
+              <ul class="nav__second-nav-list">
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Global Amount</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Live information</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">All Trafic</a></li>
+              </ul>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__menu-link" href="#"
+                ><div class="nav__menu-text">
+                  <i class="las la-expand nav-icons"></i>My Contacts
+                </div>
+                <i class="las la-angle-right nav-arrow"></i
+              ></a>
+              <ul class="nav__second-nav-list">
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Global Amount</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Live information</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">All Trafic</a></li>
+              </ul>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__menu-link" href="#"
+                ><div class="nav__menu-text">
+                  <i class="las la-file-invoice-dollar nav-icons"></i>Invoices
+                </div>
+                <i class="las la-angle-right nav-arrow"></i
+              ></a>
+              <ul class="nav__second-nav-list">
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Global Amount</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Live information</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">All Trafic</a></li>
+              </ul>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__menu-link" href="#"
+                ><div class="nav__menu-text">
+                  <i class="las la-calendar-check nav-icons"></i>Schedules
+                </div>
+                <i class="las la-angle-right nav-arrow"></i
+              ></a>
+              <ul class="nav__second-nav-list">
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Global Amount</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">Live information</a></li>
+                <li class="nav__second-item"><a href="#" class="nav__menu-link">All Trafic</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="nav__section nav__help help">
+          <div class="help__icon">
+            <div class="help__icon--orange">
+              <span class="help__icon--white">?</span>
+            </div>
           </div>
+          <div class="help__section">
+            <h3 class="help__heading">Help Center</h3>
+            <p class="help__text">
+              Having trouble in Finti? Please contact us if you have any question!
+            </p>
+          </div>
+          <button class="help__btn">Go To Help Center</button>
         </div>
-
-        <div class="help__section">
-          <h3 class="help__heading">Help Center</h3>
-          <p class="help__text">
-            Having trouble in Finti? Please contact us if you have any question!
-          </p>
-        </div>
-
-        <button class="help__btn">Go To Help Center</button>
+        
       </div>
     </nav>
 
@@ -722,12 +274,10 @@
     </header>
 
     <main class="main ml250">
+      <h1 class="visually-hidden">Super Finti bank account information</h1>
 
       <section class="main__cards-list">
-
-
         <div class="main__card-item card card--orange-blue">
-          
           <div class="card--top">
             <p class="card__name">Your Working Balance</p>
             <a class="card__link" href="#">Saving Account</a>
@@ -740,26 +290,23 @@
               <option value="2">USD</option>
             </select>
           </div>
-
         </div>
 
         <div class="main__card-item card card--pink">
-
           <div class="card--top">
             <p class="card__name">Your Working Balance</p>
             <a class="card__link card--question-icon" href="#">?</a>
           </div>
 
           <div class="card--bottom">
-            <div class="card__saving-icon-area"><i class="card__saving-icon las la-cube"></i></div>
+            <div class="card__saving-icon-area">
+              <i class="card__saving-icon las la-cube"></i>
+            </div>
             <div class="card--bottom-wrap">
               <p class="card__percentage">4.28%</p>
               <p class="card__percentage-info">Your spending increased</p>
             </div>
           </div>
-
-
-
         </div>
 
         <div class="main__card-item card pay-card">
@@ -777,22 +324,441 @@
               <p class="pay-card__date">11/24</p>
             </div>
           </div>
-
-
-
-
-
-
-
         </div>
-
-
-
-
       </section>
 
+      <section class="main__charts">
+        <div class="chart">
+          <div class="chart__text-group">
+            <h4 class="chart__heading">Tasks In Progres</h4>
+            <div class="chart__nums">
+              <div class="chart__num chart__num--big-orange">210</div>
+              <div class="chart__num chart__num--small-green">23</div>
+            </div>
+            <div class="chart__date">Current Mounth</div>
+          </div>
+
+          <div class="chart__bars-group">
+            <div class="chart__bar h60"></div>
+            <div class="chart__bar h20"></div>
+            <div class="chart__bar h40"></div>
+            <div class="chart__bar chart__bar--orange"></div>
+            <div class="chart__bar h70"></div>
+            <div class="chart__bar h50"></div>
+            <div class="chart__bar h40"></div>
+          </div>
+        </div>
+
+        <div class="chart">
+          <div class="chart__text-group">
+            <h4 class="chart__heading">Tasks Completed</h4>
+            <div class="chart__nums">
+              <div class="chart__num chart__num--big-blue">185</div>
+              <div class="chart__num chart__num--small-blue">45</div>
+            </div>
+            <div class="chart__date">Current Mounth</div>
+          </div>
+
+          <div class="chart__bars-group">
+            <div class="chart__bar h60"></div>
+            <div class="chart__bar h20"></div>
+            <div class="chart__bar h40"></div>
+            <div class="chart__bar chart__bar--blue"></div>
+            <div class="chart__bar h70"></div>
+            <div class="chart__bar h50"></div>
+            <div class="chart__bar h40"></div>
+          </div>
+        </div>
+
+        <div class="chart">
+          <div class="chart__text-group">
+            <h4 class="chart__heading">Monthly Tasks Summary</h4>
+            <div class="chart__nums">
+              <div class="chart__num chart__num--big-turquoise">1240</div>
+              <div class="chart__num chart__num--small-turquoise">145</div>
+            </div>
+            <div class="chart__date">Current Mounth</div>
+          </div>
+
+          <div class="chart__bars-group">
+            <div class="chart__bar h60"></div>
+            <div class="chart__bar h20"></div>
+            <div class="chart__bar h40"></div>
+            <div class="chart__bar chart__bar--turquoise"></div>
+            <div class="chart__bar h70"></div>
+            <div class="chart__bar h50"></div>
+            <div class="chart__bar h40"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__transactions-wrapper">
+        <section class="latest-transaction">
+          <div class="latest-transaction__top">
+            <h3 class="transaction-heading">Latest Transaction</h3>
+            <div class="latest-transaction__nav-icons-wrap">
+              <a href="#" class=".latest-transaction__nav-icon-link"
+                ><i class="las la-search latest-transaction__nav-icon"></i
+              ></a>
+
+              <a href="#" class=".latest-transaction__nav-icon-link"
+                ><i class="las la-sliders-h latest-transaction__nav-icon"></i
+              ></a>
+            </div>
+          </div>
+
+          <p class="latest-transaction__date">Mon, Mar 1</p>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div class="latest-transaction__row-icon">
+                <i class="las la-arrow-right"></i>
+              </div>
+              <p class="latest-transaction__text">Payment Set to Shakir</p>
+            </div>
+            <p class="latest-transaction__summ latest-transaction__summ--red">
+              $560.00
+            </p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div
+                class="latest-transaction__row-icon latest-transaction__row-icon--green"
+              >
+                <i class="las la-arrow-left"></i>
+              </div>
+              <p class="latest-transaction__text">Salary from Redwhale</p>
+            </div>
+            <p class="latest-transaction__summ">$12220.00</p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div class="latest-transaction__row-icon">
+                <i class="las la-arrow-right"></i>
+              </div>
+              <p class="latest-transaction__text">Money Sent to Wise.com</p>
+            </div>
+            <p class="latest-transaction__summ latest-transaction__summ--red">
+              $3000.00
+            </p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div class="latest-transaction__row-icon">
+                <i class="las la-arrow-right"></i>
+              </div>
+              <p class="latest-transaction__text">Income from Andy</p>
+            </div>
+            <p class="latest-transaction__summ latest-transaction__summ--red">
+              $320.00
+            </p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div
+                class="latest-transaction__row-icon latest-transaction__row-icon--green"
+              >
+                <i class="las la-arrow-left"></i>
+              </div>
+              <p class="latest-transaction__text">Salary from Inna</p>
+            </div>
+            <p class="latest-transaction__summ">$12220.00</p>
+          </div>
+
+          <p class="latest-transaction__date">Sunday, Apr 30</p>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div class="latest-transaction__row-icon">
+                <i class="las la-arrow-right"></i>
+              </div>
+              <p class="latest-transaction__text">Payment Set to Shakir</p>
+            </div>
+            <p class="latest-transaction__summ latest-transaction__summ--red">
+              $560.00
+            </p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div
+                class="latest-transaction__row-icon latest-transaction__row-icon--green"
+              >
+                <i class="las la-arrow-left"></i>
+              </div>
+              <p class="latest-transaction__text">Salary from Redwhale</p>
+            </div>
+            <p class="latest-transaction__summ">$12220.00</p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div class="latest-transaction__row-icon">
+                <i class="las la-arrow-right"></i>
+              </div>
+              <p class="latest-transaction__text">Money Sent to Wise.com</p>
+            </div>
+            <p class="latest-transaction__summ latest-transaction__summ--red">
+              $3000.00
+            </p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div class="latest-transaction__row-icon">
+                <i class="las la-arrow-right"></i>
+              </div>
+              <p class="latest-transaction__text">Income from Andy</p>
+            </div>
+            <p class="latest-transaction__summ latest-transaction__summ--red">
+              $320.00
+            </p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div
+                class="latest-transaction__row-icon latest-transaction__row-icon--green"
+              >
+                <i class="las la-arrow-left"></i>
+              </div>
+              <p class="latest-transaction__text">Salary from Inna</p>
+            </div>
+            <p class="latest-transaction__summ">$12220.00</p>
+          </div>
+
+          <p class="latest-transaction__date">Saturday, Apr 29</p>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div class="latest-transaction__row-icon">
+                <i class="las la-arrow-right"></i>
+              </div>
+              <p class="latest-transaction__text">Payment Set to Shakir</p>
+            </div>
+            <p class="latest-transaction__summ latest-transaction__summ--red">
+              $560.00
+            </p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div
+                class="latest-transaction__row-icon latest-transaction__row-icon--green"
+              >
+                <i class="las la-arrow-left"></i>
+              </div>
+              <p class="latest-transaction__text">Salary from Redwhale</p>
+            </div>
+            <p class="latest-transaction__summ">$12220.00</p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div class="latest-transaction__row-icon">
+                <i class="las la-arrow-right"></i>
+              </div>
+              <p class="latest-transaction__text">Money Sent to Wise.com</p>
+            </div>
+            <p class="latest-transaction__summ latest-transaction__summ--red">
+              $3000.00
+            </p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div class="latest-transaction__row-icon">
+                <i class="las la-arrow-right"></i>
+              </div>
+              <p class="latest-transaction__text">Income from Andy</p>
+            </div>
+            <p class="latest-transaction__summ latest-transaction__summ--red">
+              $320.00
+            </p>
+          </div>
+
+          <div class="latest-transaction__row">
+            <div class="icon-text-wrap">
+              <div
+                class="latest-transaction__row-icon latest-transaction__row-icon--green"
+              >
+                <i class="las la-arrow-left"></i>
+              </div>
+              <p class="latest-transaction__text">Salary from Inna</p>
+            </div>
+            <p class="latest-transaction__summ">$12220.00</p>
+          </div>
+        </section>
+
+        <section class="upcoming-transaction">
+          <div class="upcoming-transaction__top">
+            <h3 class="upcoming-transaction__headig">Upcoming Transactions</h3>
+            <a href="#" class="upcoming-transaction__link">View All</a>
+          </div>
+
+          <p class="upcoming-transaction__date">Today</p>
+
+          <div class="upcoming-transaction__row">
+            <div class="upcoming-transaction-row-wrap">
+              <div
+                class="upcoming-transaction__icon upcoming-transaction__icon--navy"
+              >
+                <i class="las la-tint"></i>
+              </div>
+
+              <div class="upcoming-transaction__text">
+                <p class="upcoming-transaction__discription">Water Bill</p>
+                <p class="upcoming-transaction__status">Unsuccessfully</p>
+              </div>
+            </div>
+
+            <p class="upcoming-transaction__sum upcoming-transaction__sum--red">
+              - $280
+            </p>
+          </div>
+
+          <p class="upcoming-transaction__date">Tomorrow</p>
+
+          <div class="upcoming-transaction__row">
+            <div class="upcoming-transaction-row-wrap">
+              <div
+                class="upcoming-transaction__icon upcoming-transaction__icon--red"
+              >
+                <i class="las la-comment-dollar"></i>
+              </div>
+
+              <div class="upcoming-transaction__text">
+                <p class="upcoming-transaction__discription">
+                  Income: Salary Oct
+                </p>
+                <p class="upcoming-transaction__status">Successfully</p>
+              </div>
+            </div>
+
+            <p class="upcoming-transaction__sum">+ $1200</p>
+          </div>
+
+          <div class="upcoming-transaction__row">
+            <div class="upcoming-transaction-row-wrap">
+              <div
+                class="upcoming-transaction__icon upcoming-transaction__icon--blue"
+              >
+                <i class="las la-plug"></i>
+              </div>
+
+              <div class="upcoming-transaction__text">
+                <p class="upcoming-transaction__discription">Electicity Bill</p>
+                <p class="upcoming-transaction__status">Successfully</p>
+              </div>
+            </div>
+
+            <p class="upcoming-transaction__sum upcoming-transaction__sum--red">
+              - $480
+            </p>
+          </div>
+
+          <div class="upcoming-transaction__row">
+            <div class="upcoming-transaction-row-wrap">
+              <div
+                class="upcoming-transaction__icon upcoming-transaction__icon--orange"
+              >
+                <i class="las la-calendar"></i>
+              </div>
+
+              <div class="upcoming-transaction__text">
+                <p class="upcoming-transaction__discription">
+                  Income: Jane transfer
+                </p>
+                <p class="upcoming-transaction__status">Successfully</p>
+              </div>
+            </div>
+
+            <p class="upcoming-transaction__sum">+ $500</p>
+          </div>
+
+          <div class="upcoming-transaction__row">
+            <div class="upcoming-transaction-row-wrap">
+              <div
+                class="upcoming-transaction__icon upcoming-transaction__icon--orange"
+              >
+                <i class="las la-calendar"></i>
+              </div>
+
+              <div class="upcoming-transaction__text">
+                <p class="upcoming-transaction__discription">
+                  Income: Jane transfer
+                </p>
+                <p class="upcoming-transaction__status">Successfully</p>
+              </div>
+            </div>
+
+            <p class="upcoming-transaction__sum">+ $500</p>
+          </div>
+
+          <div class="upcoming-transaction__row">
+            <div class="upcoming-transaction-row-wrap">
+              <div
+                class="upcoming-transaction__icon upcoming-transaction__icon--orange"
+              >
+                <i class="las la-calendar"></i>
+              </div>
+
+              <div class="upcoming-transaction__text">
+                <p class="upcoming-transaction__discription">
+                  Income: Jane transfer
+                </p>
+                <p class="upcoming-transaction__status">Successfully</p>
+              </div>
+            </div>
+
+            <p class="upcoming-transaction__sum">+ $500</p>
+          </div>
+
+          <div class="upcoming-transaction__row">
+            <div class="upcoming-transaction-row-wrap">
+              <div
+                class="upcoming-transaction__icon upcoming-transaction__icon--orange"
+              >
+                <i class="las la-calendar"></i>
+              </div>
+
+              <div class="upcoming-transaction__text">
+                <p class="upcoming-transaction__discription">
+                  Income: Jane transfer
+                </p>
+                <p class="upcoming-transaction__status">Successfully</p>
+              </div>
+            </div>
+
+            <p class="upcoming-transaction__sum">+ $500</p>
+          </div>
+
+          <div class="upcoming-transaction__row">
+            <div class="upcoming-transaction-row-wrap">
+              <div
+                class="upcoming-transaction__icon upcoming-transaction__icon--orange"
+              >
+                <i class="las la-calendar"></i>
+              </div>
+
+              <div class="upcoming-transaction__text">
+                <p class="upcoming-transaction__discription">
+                  Income: Jane transfer
+                </p>
+                <p class="upcoming-transaction__status">Successfully</p>
+              </div>
+            </div>
+
+            <p class="upcoming-transaction__sum">+ $500</p>
+          </div>
+        </section>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer ml250">© MaxMay</footer>
   </body>
 </html>
