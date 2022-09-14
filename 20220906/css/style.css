@@ -13,6 +13,10 @@
   margin-left: 250px;
 }
 
+.mob-overflow {
+  overflow: auto;
+}
+
 /* ---------------- nav ---------------- */
 
 
@@ -1002,6 +1006,10 @@ label.m-menu__toggle {
     width: 100%;
     bottom: 0;
     z-index: 0;
+  }
+
+  .mob-overflow--hidden {
+    overflow: hidden;
   }
 
 

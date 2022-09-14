@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body>
+  <body class="mob-overflow">
     <aside class="sidebar">
       <div class="m-menu-overlay" onclick="toggleMenu()"></div>
       <nav>
@@ -819,9 +819,11 @@
       function toggleMenu() {
         var sidebar = document.querySelector(".sidebar");
         var overlay = document.querySelector(".m-menu-overlay");
+        var hideoverflow = document.querySelector(".mob-overflow");
 
         overlay.classList.toggle("m-menu-overlay--open");
         sidebar.classList.toggle("sidebar--open");
+        hideoverflow.classList.toggle("mob-overflow--hidden");
       }
     </script>
   </body>
