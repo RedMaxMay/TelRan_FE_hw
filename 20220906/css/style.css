@@ -30,6 +30,10 @@
   background-color: #f6f7ff;
 }
 
+.m-menu-overlay {
+  display: none;
+}
+
 .logo {
   text-decoration: none;
   display: flex;
@@ -125,13 +129,6 @@
         /* padding: 10px 15px; */
         width: 120px;        
     }
-
-
-
-
-
-
-
 
 
 /* ---------------- nav help section ---------------- */
@@ -331,6 +328,10 @@
   border-radius: 5px;
   box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px,
     rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+}
+
+.header__menu-icon {
+  display: none;
 }
 
 /* ----------------- Main ---------------- */
@@ -948,3 +949,61 @@ label.m-menu__toggle {
   }
 }
 
+
+/* ------------- MOB ------------ */
+
+
+@media (max-width: 768px) {
+
+  .sidebar {
+    transform: translateX(-250px);
+    transition: all 0.5s ease-out;
+    z-index: 2;
+  }
+
+  .sidebar--open {
+    transform: none;
+    width: 100%;
+  }
+
+  .help__heading {
+    display: none;
+  }
+
+  .help {
+    min-height: auto;
+  }
+
+  .ml250 {
+    margin: 0;
+  }
+
+  .header__icons {
+    display: none;
+  }
+
+  .header__links {
+    display: none;
+  }
+
+  .header__search {
+    margin: 0 auto;
+  }
+  
+  .header__menu-icon {
+    display: block;
+  }
+
+  .m-menu-overlay--open {
+    display: block;
+    background-color: rgba(103, 103, 103, 0.5);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+  }
+
+
+
+}
