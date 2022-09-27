@@ -36,8 +36,9 @@ html {
 
 .main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   min-height: 100vh;
   max-width: 1000px;
 }
@@ -92,4 +93,34 @@ html {
 
 .main__hw-link {
   text-decoration: none;
+}
+
+.main__hw-item:nth-child(7) {
+  order: -7;
+}
+
+.main__hw-item:nth-child(6) {
+  order: -6;
+}
+
+.main__hw-item:nth-child(5) {
+  order: -5;
+}
+
+.main__hw-item:nth-child(4) {
+  order: -4;
+}
+
+.main__hw-item:nth-child(3) {
+  order: -3;
+}
+
+.main__hw-item:nth-child(2) {
+  order: -2;
+}
+
+
+.main__text {
+  margin: 20px auto;
+
 }
