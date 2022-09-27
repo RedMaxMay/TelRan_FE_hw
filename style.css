@@ -95,6 +95,10 @@ html {
   text-decoration: none;
 }
 
+.main__hw-item:nth-child(8) {
+  order: -8;
+}
+
 .main__hw-item:nth-child(7) {
   order: -7;
 }
