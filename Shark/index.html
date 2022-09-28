@@ -12,9 +12,7 @@
     />
 
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css">
-
-    
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
@@ -119,6 +117,9 @@
     <main class="main">
       <div class="inbox">
         <div class="inbox__head">
+          <button class="btn m-menu" onclick="openMenu()">
+            <i class="las la-bars"></i>
+          </button>
           <h2 class="inbox__title">Inbox</h2>
           <button class="btn">+</button>
         </div>
@@ -391,41 +392,45 @@
       </div>
 
       <div class="chat">
-        <div class="chat__info">
-          <div class="chat__person">
-            <div class="chat__person--wrap">
-              <img
-                class="chat__user-img"
-                src="https://via.placeholder.com/40x40"
-                alt="User avatar"
-              />
-              <div class="contact__user-online"></div>
-            </div>
+        <div class="m-menu-overlay" onclick="closeMobMenu()"></div>
 
-            <div class="chat__info-text">
-              <div class="contact__name">Michael B.</div>
-              <div class="chat__online">Online</div>
+        <div class="chat__top">
+          <button class="btn back-to-inbox" onclick="backToInbox()">
+            <i class="las la-arrow-left"></i>
+          </button>
+          <div class="chat__info">
+            <div class="chat__person">
+              <div class="chat__person--wrap">
+                <img
+                  class="chat__user-img"
+                  src="https://via.placeholder.com/40x40"
+                  alt="User avatar"
+                />
+                <div class="contact__user-online"></div>
+              </div>
+              <div class="chat__info-text">
+                <div class="contact__name">Michael B.</div>
+                <div class="chat__online">Online</div>
+              </div>
             </div>
-          </div>
-
-          <div class="chat__utils">
-            <div class="search">
-              <i class="las la-search search__icon"></i>
-              <input
-                class="search__input"
-                type="text"
-                name="search"
-                id="search"
-                placeholder="Search..."
-              />
+            <div class="chat__utils">
+              <div class="search">
+                <i class="las la-search search__icon"></i>
+                <input
+                  class="search__input"
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="Search..."
+                />
+              </div>
+              <button class="btn" type="button">
+                <i class="las la-microphone"></i>
+              </button>
+              <button class="btn" type="button">
+                <i class="las la-video"></i>
+              </button>
             </div>
-
-            <button class="btn" type="button">
-              <i class="las la-microphone"></i>
-            </button>
-            <button class="btn" type="button">
-              <i class="las la-video"></i>
-            </button>
           </div>
         </div>
 
@@ -551,7 +556,7 @@
       </div>
 
       <div class="side-btns">
-        <button class="btn" type="button">
+        <button class="btn btn--no-border" type="button">
           <i class="las la-ellipsis-h"></i>
         </button>
 
@@ -566,10 +571,33 @@
             <i class="las la-trash"></i>
           </button>
         </div>
-
-        
-
       </div>
     </main>
+
+    <script>
+      function backToInbox() {
+        let inbox = document.querySelector(".inbox");
+        let overlay = document.querySelector(".m-menu-overlay");
+
+        inbox.classList.add("inbox--open");
+        overlay.classList.add("m-menu-overlay--open");
+      }
+
+      function closeMobMenu() {
+        let inbox = document.querySelector(".inbox");
+        let overlay = document.querySelector(".m-menu-overlay");
+        let sidebar = document.querySelector(".sidebar");
+
+        overlay.classList.remove("m-menu-overlay--open");
+        sidebar.classList.remove("sidebar--open");
+        inbox.classList.remove("inbox--open");
+      }
+
+      function openMenu() {
+        let sidebar = document.querySelector(".sidebar");
+
+        sidebar.classList.add("sidebar--open");
+      }
+    </script>
   </body>
 </html>
