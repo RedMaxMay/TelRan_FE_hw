@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hello-btn {
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(9, 120, 15);
+  color: white;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.hello-btn:hover {
+  background-color: rgb(7, 145, 13);
+}
+
+.cat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cat__img {
+  width: 500px;
+}
+
+.cat__img--rounded {
+  border-radius: 50px;
+}
+
+.cat__text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
