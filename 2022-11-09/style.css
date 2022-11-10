@@ -1,0 +1,76 @@
+body,
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section {
+  background-color: rgb(233, 233, 233);
+  width: 70%;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 45%;
+  height: 45px;
+  padding: 10px;
+  margin: 10px 0;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn-input-off {
+  background-color: rgb(255, 0, 0);
+}
+
+.btn-input-off:hover {
+  background-color: rgb(229, 0, 0);
+}
+
+.btn-input-on {
+  background-color: rgb(6, 120, 6);
+}
+
+.btn-input-on:hover {
+  background-color: rgb(6, 96, 6);
+}
+
+.btn-change-p {
+  background-color: rgb(80, 72, 237);
+}
+
+.test-input {
+  padding: 15px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.active {
+  background-color: rgb(201, 182, 38);
+}
+
+.textToChange {
+  text-transform: uppercase;
+}
