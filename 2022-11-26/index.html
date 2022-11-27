@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW for 27.11.2022</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="wrap">
+      <h1 class="heading">Homework for 26.11.2022</h1>
+      <p class="descr">Для добавления товара введите данные в соответствующие поля:</p>
+      <form class="add-prod" method="get">
+        <input
+          class="add-prod__input"
+          name="title"
+          type="text"
+          placeholder="Название товара"
+          required
+        />
+        <input
+          class="add-prod__input"
+          name="price"
+          type="number"
+          placeholder="Цена товара"
+          required
+        />
+        <input
+          class="add-prod__input"
+          name="quantity"
+          type="number"
+          placeholder="Количество шт."
+          required
+        />
+        <button class="add-prod__btn" type="submit">Добавить</button>
+      </form>
+      <ul class="products">
+        <!-- Тестовый код:
+
+          <li class="product-item">
+          <h3 class="product-item__name">ВелосипедВеловипедВелосипед</h3>
+          <p class="product-item__price">45000</p>
+          <p class="product-item__summ">45000 * 3 = 135000</p>
+        </li>
+        <li class="product-item">
+          <h3 class="product-item__name">Ролики</h3>
+          <p class="product-item__price">20000</p>
+          <p class="product-item__summ">20000 * 2 = 40000</p>
+        </li>
+        <li class="product-item">
+          <h3 class="product-item__name">Самокат</h3>
+          <p class="product-item__price">15000</p>
+          <p class="product-item__summ">15000 * 5 = 75000</p>
+        </li>
+        <li class="product-item">
+          <h3 class="product-item__name">Самокат</h3>
+          <p class="product-item__price">15000</p>
+          <p class="product-item__summ">15000 * 5 = 75000</p>
+        </li>
+        <li class="product-item">
+          <h3 class="product-item__name">Самокат</h3>
+          <p class="product-item__price">15000</p>
+          <p class="product-item__summ">15000 * 5 = 75000</p>
+        </li> -->
+      </ul>
+      <div class="total-numbers">
+        <!-- <p class="total-numbers__price">Общая стоимость товаров: 250000</p>
+        <p class="total-numbers__quantity">Общее количество товаров: 10</p> -->
+      </div>
+    </section>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>
